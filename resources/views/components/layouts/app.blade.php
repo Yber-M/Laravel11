@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+    
     <x-layouts.navegation />
 
     {{-- <pre> {{ $resultado }} {{ $sum }} </pre> --}}
