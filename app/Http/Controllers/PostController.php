@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-class PostController
+use Illuminate\Http\Request;
+
+class PostController extends Controller
 {
     public function index() {
         $posts = [
