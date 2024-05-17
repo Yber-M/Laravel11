@@ -5,5 +5,6 @@
     resultado="El resultado es"
 >
 
+
     <h1>Hola Mundo!</h1>
 </x-layouts.app>
