@@ -6,14 +6,15 @@ CREATE TABLE posts (
     title VARCHAR(255) NOT NULL
 );
 
-INSERT INTO posts(title) VALUES
-('POST Marlon'),
-('POST Aureliano'),
-('POST Jesús');
+INSERT INTO posts(title, created_at, updated_at) VALUES
+('POST Marlon', now(), now()),
+('POST Aureliano', now(), now()),
+('POST Jesús',now(), now()),
+('POST Tu Viejita', now(), now());
 
-INSERT INTO posts(title) VALUES
-('POST Tu Viejita');
 
 DELETE FROM posts WHERE id = 1;
 
 SELECT * FROM posts;
+
+DROP TABLE posts;
