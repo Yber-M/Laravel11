@@ -1,4 +1,6 @@
-<x-layouts.app title="About" meta-description="ABOUT Meta Description">
+<x-layouts.app 
+    title="About" 
+    meta-description="ABOUT Meta Description">
 
     <h1>ABOUT CHI k no?</h1>
 

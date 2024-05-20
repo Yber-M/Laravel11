@@ -1,4 +1,7 @@
-<x-layouts.app title="BLOG" meta-description="BLOG Meta Description">
+<x-layouts.app 
+    title="BLOG" 
+    meta-description="BLOG Meta Description"
+>
 
     <h1 style="color: rgb(175, 59, 59)">Este es mi primer BLOG</h1>
 
