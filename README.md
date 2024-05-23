@@ -4,4 +4,4 @@
 
 - Laragon 6.0
 - PHP 8.1.10
-- [laravel9.test ](http://laravel9.test)OPEN.
+- [laravel11.test ](http://laravel11.test)OPEN.
