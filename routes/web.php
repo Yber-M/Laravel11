@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DtPipolController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,5 @@ Route::get('/abouting', function () {
     //OjO -> ('Nombre de la vista'), (Datos)!Opcional
     return view('about', ['dtPipol' => $dtPipol]);
 })->name('about');
+
+Route::get('/usandocontrolador', [DtPipolController::class, 'getDtPipol'])->name('usando');
