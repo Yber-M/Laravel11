@@ -1,5 +1,5 @@
 <x-layouts.section
-    title="Contacto"
+    title="Contácto"
     meta-description="Contacto Meta Description"
 >
 
