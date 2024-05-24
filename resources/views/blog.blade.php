@@ -1,4 +1,4 @@
-<x-layouts.app 
+<x-layouts.section
     title="BLOG" 
     meta-description="BLOG Meta Description"
 >
@@ -12,4 +12,4 @@
         <h3 style="color: yellow">{{ $post -> title }}</h3>
     @endforeach
 
-</x-layouts.app>
+</x-layouts.section>
