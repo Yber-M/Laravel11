@@ -11,7 +11,8 @@
 
 <body>
 
-    {{--? Llamamos a la navegation.blade.php usando los componentes de Laravel--}}
+    {{--? Llamamos a la navegation.blade.php usando los componentes de blade--}}
+    {{--OjO: siempre empieza con X- seguido de la direccion del componente --}}
     <x-layouts.navegation /> 
 
     {{--? De la siguiente forma también se puede incluir el archivo usando plantillas navegation.blade.php--}}
@@ -19,7 +20,7 @@
 
     <pre> {{ $resultado }} {{ $sum }} </pre>
 
-    {{--TODO -> $Slot es una variable reservada de LARAVEL --}}
+    {{--OjO -> $Slot es una variable reservada de LARAVEL --}}
     {{ $slot }}
 
     
