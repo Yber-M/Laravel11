@@ -43,3 +43,8 @@ también tenemos para el API(solos 5 métodos, no estarán create y edit)
 
 
         php artisan migrate:fresh
+
+- Podemos usar este comando para actualizar la estructura de una tabla sin perder datos. (En este caso detectara el caracter "to" y creará la estructura automáticamente para hacer dicha acción)
+
+        php artisan make:migration addexample_bodyexample_to_namemigrations_table
+### Puedes ver la siguiente documentación para hacer tu DB con Laravel -> [Tipos de columna disponibles](https://laravel.com/docs/10.x/migrations#available-column-types)
