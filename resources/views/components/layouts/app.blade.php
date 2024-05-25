@@ -25,7 +25,7 @@
 
     
     {{--? Cuando se usa signos de admración se omite la proteccion de blade para la inyección de código--}}
-    {!! "<script>alert('security problem')</script>" !!}
+    {!! "<script>alert('Hello, welcome a GLOBTECx-')</script>" !!}
 
 </body>
 
