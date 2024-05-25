@@ -1,6 +1,7 @@
-CREATE DATABASE laravel11;
+CREATE DATABASE LaravelDB;
 
-use laravel11;
+use LaravelDB;
+
 CREATE TABLE posts (
 	id INT auto_increment PRIMARY KEY,
     title VARCHAR(255) NOT NULL
@@ -23,3 +24,5 @@ DELETE FROM posts WHERE id = 1;
 SELECT * FROM posts;
 
 DROP TABLE posts;
+
+DROP DATABASE laravel11;
