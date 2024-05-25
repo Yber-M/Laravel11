@@ -6,7 +6,9 @@
 - PHP 8.1.10
 - [laravel11.test ](http://laravel11.test)OPEN.
 
-## Comandos en consola[Artisan ]
+## Comandos en consola 
+### [Crear Controladores]
+Route -> app/http/Controllers
 - Crear controlador vacio
 
         php artisan make:controller NameController
@@ -22,3 +24,22 @@ también tenemos para el API(solos 5 métodos, no estarán create y edit)
         php artisan make:controller NameController -r
     
         php artisan make:controller NameController --api
+### [Crear DB con migraciones]
+| Route -> app/database/migrations
+
+- Crear una migración
+        
+        php artisan make:migrations name_the_migration
+
+- Migrar todo y utilizar el método UP
+
+        php artisan migrate
+
+- Se utlizará los métodos DOWN(Drop)
+
+        php artisan migrate:rollback
+
+- Eliminará todas las tablas y ejecturá todas las migraciones desde 0. (Usar cuando no se está en producción, ya que se borrará todos los datos de la DB)
+
+
+        php artisan migrate:fresh
