@@ -11,8 +11,11 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = DB::table('posts') -> get();
+        //? Con el metodo table indicamos que tabla que queremos usar y usamos el metodo get
+        $posts = DB::table('posts')->get();
 
-        return view('blog', ['posts' => $posts]);
+        //? Se retorna a la vista blog 
+        return view('blog', ['posts'=> $posts]);
+  
     }
 }

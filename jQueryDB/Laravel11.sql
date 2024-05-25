@@ -5,6 +5,11 @@ CREATE TABLE posts (
 	id INT auto_increment PRIMARY KEY,
     title VARCHAR(255) NOT NULL
 );
+INSERT INTO posts(title) VALUES 
+('PostMarlon'),
+('PostYber'),
+('PostQuispe'),
+('PostOlano');
 
 INSERT INTO posts(title, created_at, updated_at) VALUES
 ('POST Marlon', now(), now()),
