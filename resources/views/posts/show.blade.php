@@ -7,6 +7,9 @@
     <p>DNI: {{ $post->dni }}</p>
     <p>Titulo: {{ $post->title }}</p>
     <p>Fecha de creación: {{ $post->created_at }}</p>
-    <button><a href=" {{ route('posts.index') }} ">VOLVER</a></button>
+    
+    <a href=" {{ route('posts.index') }}">
+        <button style="background: green; cursor: pointer; border-color: blueviolet;"> VOLVER </button>
+    </a>
 
 </x-layouts.posts>
