@@ -67,3 +67,4 @@ también tenemos para el API(solos 5 métodos, no estarán create y edit)
 
 ![](/img/ArtisanTinker2.png)
 ![](/img/ArtisanTinker.png)
+![](/img/ArtisanTinker3.png)
