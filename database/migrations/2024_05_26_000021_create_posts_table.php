@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
-            // OjO -> https://laravel.com/docs/10.x/migrations#available-column-types
-            $table->char('dni', 8)->after('id');
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+            $table->char('dni', 8);
+            $table->string('title');
+            $table->timestamps();
         });
     }
 
@@ -22,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->dropColumn('apellido');
-        });
+        Schema::dropIfExists('posts');
     }
 };
