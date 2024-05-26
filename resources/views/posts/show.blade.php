@@ -3,7 +3,7 @@
     :meta-description="$post->dni"
 >
 
-    <h1>Datos del Post</h1>
+    <h1>Datos del Post N° {{ $post->id }}</h1>
     <p>DNI: {{ $post->dni }}</p>
     <p>Titulo: {{ $post->title }}</p>
     <p>Fecha de creación: {{ $post->created_at }}</p>
