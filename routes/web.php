@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 // OjO -> en el metodo VIEW se acepta 3 parametros -> ('Aca va el nombre de la ruta'), (el view que se va a devolver), (Datos)
 Route::view('/contact', 'contacto')->name('contacto');
 
-Route::view('/home', 'inicio')->name('inicio');
+Route::view('/', 'inicio')->name('inicio');
 
 // OjO -> en un metodo GET solo se aceptan 2 parametros[Ruta, focable o function]
 Route::get('/blogg', [PostController::class, 'index'])->name('blog');

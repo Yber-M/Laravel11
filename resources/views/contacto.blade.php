@@ -1,6 +1,6 @@
 {{--OjO -> <x-layouts.section/> es equivalente a @component('components.layouts.section') --}}
 
-@component('components.layouts.section')
+{{-- @component('components.layouts.section') --}}
 
     {{--? Lo bueno del componente de blade es qye se puede agregar otras propiedades dentro --}}
     <x-layouts.section 
@@ -11,4 +11,4 @@
             <h1>Acá me puedes contactar</h1>
 
     </x-layouts.section>
-@endcomponent
+{{-- @endcomponent --}}
