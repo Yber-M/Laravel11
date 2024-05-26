@@ -16,7 +16,15 @@ class PostController extends Controller
         $posts = Post::get();  
         
         //? Se retorna a la vista blog 
-        return view('blog', ['posts'=> $posts]);
+        return view('posts.index', ['posts'=> $posts]);
   
+    }
+
+    public function show(Post $post) { 
+        //OjO -> Cuando lo definimos el Post nos saltamos el paso de la linea 25(TypeHints)
+        //? findOrFail es para que nos mande a un error 404 cuando no haya una URL correcta
+        // return Post::findOrFail($post);
+        // return $post;
+        return view('posts.show', ['post'=> $post]);
     }
 }
