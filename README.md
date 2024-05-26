@@ -60,7 +60,7 @@ también tenemos para el API(solos 5 métodos, no estarán create y edit)
 
         php artisan make:model ModelExample -m
 
-### OTROS
+### Comandos Eloquent
 - Ejecutar PHP en consola
 
         php artisan tinker
@@ -68,3 +68,28 @@ también tenemos para el API(solos 5 métodos, no estarán create y edit)
 ![](/img/ArtisanTinker2.png)
 ![](/img/ArtisanTinker.png)
 ![](/img/ArtisanTinker3.png)
+
+- Obtener tods los post
+
+        Post::get();
+
+- Obtener todos los post por ID
+
+        Post::find(1);
+        Post::find(2);
+
+- Como se puede evidenciar solo se guarda en memoria, si queremos guardar podemos usar:
+
+        $post -> title = Modified Title
+        $post -> save();
+
+- Para crear un nuevo registro
+
+        $post = new Post;
+        $post -> dni = '23784378'
+        $post -> title = 'Segundo Post'
+        $post -> save();
+
+- Para eliminar el registro
+
+        $post -> delete();
