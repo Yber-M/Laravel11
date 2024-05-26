@@ -59,3 +59,11 @@ también tenemos para el API(solos 5 métodos, no estarán create y edit)
 - Para crear el modelo y migration juntos
 
         php artisan make:model ModelExample -m
+
+### OTROS
+- Ejecutar PHP en consola
+
+        php artisan tinker
+
+![](/img/ArtisanTinker2.png)
+![](/img/ArtisanTinker.png)
