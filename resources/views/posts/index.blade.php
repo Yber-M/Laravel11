@@ -11,8 +11,10 @@
 
     @foreach ($posts as $post)
         <h2>
-            <a href=" {{ route('posts.show', $post) }} ">
-                {{ $post->title }}
+            DNI: {{ $post->dni }} <br>
+            Nombre: {{ $post->title}} <br>
+            <a style="text-decoration: none;" href=" {{ route('posts.show', $post) }} ">
+                <button style="background: green; cursor: pointer; border-color: blueviolet;">ACCEDER</button>
             </a>
         </h2>
     @endforeach
