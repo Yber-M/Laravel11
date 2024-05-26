@@ -48,3 +48,14 @@ también tenemos para el API(solos 5 métodos, no estarán create y edit)
 
         php artisan make:migration addexample_bodyexample_to_namemigrations_table
 ### Puedes ver la siguiente documentación para hacer tu DB con Laravel -> [Tipos de columna disponibles](https://laravel.com/docs/10.x/migrations#available-column-types)
+
+### [Crear modelos] Eloquent ORM de Laravel
+- Para crear un modelo por consola
+
+        php artisan make:model ModelExample
+
+#### Cada que ves que creemos el model debemos crear una migration. Podemos usar lo siguiente
+
+- Para crear el modelo y migration juntos
+
+        php artisan make:model ModelExample -m
