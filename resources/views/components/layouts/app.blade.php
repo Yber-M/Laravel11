@@ -16,7 +16,7 @@
     <x-layouts.navegation /> 
 
     {{--? De la siguiente forma también se puede incluir el archivo usando plantillas navegation.blade.php--}}
-    @include('components.layouts.navegation')
+    {{-- @include('components.layouts.navegation') --}}
 
     <pre> {{ $resultado }} {{ $sum }} </pre>
 
