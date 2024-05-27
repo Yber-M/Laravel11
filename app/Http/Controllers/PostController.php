@@ -20,6 +20,7 @@ class PostController extends Controller
   
     }
 
+    //* CRUD
     public function show(Post $post) { 
         //OjO -> Cuando lo definimos el Post nos saltamos el paso de la linea 25(TypeHints)
         //? findOrFail es para que nos mande a un error 404 cuando no haya una URL correcta
@@ -27,4 +28,22 @@ class PostController extends Controller
         // return $post;
         return view('posts.show', ['post'=> $post]);
     }
+
+    public function create() {
+        return view('posts.crear');
+    }
+
+    public function update() {
+        return view('posts.actualizar');
+    }
+
+    public function delete() {
+        return view('posts.eliminar');
+    }
+
+    public function store()
+    {
+        return 'Agregado con exito y de forma segura. Felicitaciones';
+    }
+
 }
