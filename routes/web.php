@@ -13,8 +13,13 @@ Route::view('/contact', 'contacto')->name('contacto');
 Route::view('/', 'inicio')->name('inicio');
 
 // OjO -> en un metodo GET solo se aceptan 2 parametros[Ruta, focable o function]
+// OjO -> Las rutas importan
 Route::get('/blogg', [PostController::class, 'index'])->name('posts.index');
-Route::get('/blogg/{post}', [PostController::class,'show'])->name('posts.show');
+Route::get('/blogg/crear', [PostController::class, 'create'])->name('posts.crear');
+Route::post('/blogg', [PostController::class, 'store'])->name('posts.store');
+Route::get('/blogg/actualizar', [PostController::class, 'update'])->name('posts.actualizar');
+Route::get('/blogg/eliminar', [PostController::class, 'delete'])->name('posts.eliminar');
+Route::get('/blogg/{post}', [PostController::class, 'show'])->name('posts.show');
 
 Route::get('/abouting', function () {
     $dtPipol = [
@@ -30,4 +35,3 @@ Route::get('/abouting', function () {
 })->name('about');
 
 Route::get('/usandocontrolador', [DtPipolController::class, 'getDtPipol'])->name('usando');
-
