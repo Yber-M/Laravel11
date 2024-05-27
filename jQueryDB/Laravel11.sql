@@ -33,12 +33,12 @@ now()),
 now(), 
 now()),
 
-('postdaniel@gmail.com', '
-32984367', 'Daniel Infante Cornelio', 28, 'Los jazmines de odin',
+('postdaniel@gmail.com', '32984367', 'Daniel Infante Cornelio', 28, 'Los jazmines de odin',
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper sed tellus a sollicitudin. Donec condimentum quis nisi non bibendum. Aliquam at nisi maximus, hendrerit lectus ac, accumsan massa. Aliquam suscipit, metus sit amet dignissim mollis, lorem dolor bibendum augue, in pretium nisi nisi ut enim. Vestibulum eget interdum nisi.', 
 now(), 
 now());
 
+DESCRIBE posts;
 
 DELETE FROM posts WHERE id = 1;
 
