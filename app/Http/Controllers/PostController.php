@@ -41,9 +41,32 @@ class PostController extends Controller
         return view('posts.eliminar');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        return 'Agregado con exito y de forma segura. Felicitaciones';
+        //? Validar datos del formulario
+        $validatedData = $request->validate([
+            'correo' => 'required|email|max:100',
+            'dni' => 'required|digits:8',
+            'nombre' => 'required|string|max:255',
+            'edad' => 'required|integer|min:0',
+            'title' => 'required|string|max:255',
+            'cuerpo' => 'required|string|max:2000',
+        ]);
+
+        //? Creamos un nuevo post despues de validar los datos
+        $post = new Post;
+        $post->correo = $validatedData['correo'];
+        $post->dni = $validatedData['dni'];
+        $post->nombre = $validatedData['nombre'];
+        $post->edad = $validatedData['edad'];
+        $post->title = $validatedData['title'];
+        $post->cuerpo = $validatedData['cuerpo'];
+
+        //? Insertamos a la tabla en la DB
+        $post->save();
+
+        //? El metodo request permite acceder a los datos enviados en la solicitud
+        return redirect()->route('posts.index')->with('success', 'Post creado exitosamente');
     }
 
 }
