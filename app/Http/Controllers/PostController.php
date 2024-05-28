@@ -66,7 +66,7 @@ class PostController extends Controller
         $post->save();
 
         //? El metodo request permite acceder a los datos enviados en la solicitud
-        return redirect()->route('posts.index')->with('success', 'Post creado exitosamente');
+        return redirect()->route('posts.index')->with('success', 'El post "' . $post->title . '" | Fue creado exitosamente');
     }
 
 }
