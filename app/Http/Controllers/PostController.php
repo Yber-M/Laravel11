@@ -49,17 +49,18 @@ class PostController extends Controller
             'dni' => 'required|digits:8',
             'nombre' => 'required|string|max:255',
             'edad' => 'required|integer|min:0',
-            'title' => 'required|string|max:255',
+            'titulo' => 'required|string|max:255',
             'cuerpo' => 'required|string|max:2000',
         ]);
 
         //? Creamos un nuevo post despues de validar los datos
+        $cont = 0;
         $post = new Post;
         $post->correo = $validatedData['correo'];
         $post->dni = $validatedData['dni'];
         $post->nombre = $validatedData['nombre'];
         $post->edad = $validatedData['edad'];
-        $post->title = $validatedData['title'];
+        $post->title = $validatedData['titulo'];
         $post->cuerpo = $validatedData['cuerpo'];
 
         //? Insertamos a la tabla en la DB
