@@ -29,7 +29,7 @@
 
     <div id="buttonCrud">
 
-        <a href=" {{ route('posts.crear')}} ">
+        <a href=" {{ route('posts.crear') }} ">
             <button class="btnAdd">
                 AGREGAR POST
             </button>
@@ -52,6 +52,14 @@
 
     <h2 style="color: green">TODOS LOS POST:</h2>
 
+    {{--?* Mensajes de aprobacion de procesos --}}
+    @if (session('success'))
+        <div class="alert alert-success">
+            <h2>Registrado Correctamente</h2>
+            {{ session('success') }}
+        </div>
+    @endif
+
     @foreach ($posts as $post)
         <h2>
             Titulo: {{ $post->title }} <br>
@@ -60,6 +68,7 @@
                 <button>VER MÁS</button>
             </a>
         </h2>
+        <br><br>
     @endforeach
 
 </x-layouts.section>
