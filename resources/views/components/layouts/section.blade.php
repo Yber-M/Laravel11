@@ -15,7 +15,13 @@
 <body>
 
     <x-layouts.navegation />
-
+    {{-- ?* Mensajes de aprobacion de procesos --}}
+    @if (session('success'))
+        <div class="alert alert-success">
+            <h2>Registrado Correctamente</h2>
+            {{ session('success') }}
+        </div>
+    @endif
     {{-- OjO -> $Slot es una variable reservada de LARAVEL --}}
     {{ $slot }}
 

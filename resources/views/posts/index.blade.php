@@ -52,14 +52,6 @@
 
     <h2 style="color: green">TODOS LOS POST:</h2>
 
-    {{--?* Mensajes de aprobacion de procesos --}}
-    @if (session('success'))
-        <div class="alert alert-success">
-            <h2>Registrado Correctamente</h2>
-            {{ session('success') }}
-        </div>
-    @endif
-
     @foreach ($posts as $post)
         <h2>
             Titulo: {{ $post->title }} <br>
