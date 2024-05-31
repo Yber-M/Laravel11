@@ -11,6 +11,7 @@
             background: yellow;
             font-family: arial;
         }
+
         textarea {
             resize: none;
         }
@@ -19,37 +20,79 @@
     <form action=" {{ route('posts.store') }} " method="POST">
         @csrf {{-- OjO: Proteccion contra CSRF, usar cada ves que se usa POST. Si no saldrá error 419 --}}
 
-        
+
         Correo: <br><br>
-        <input type="email" name="correo" id="correo" value="{{ old('correo') }}" maxlength="100" required> <br><br>
+        <input type="email" name="correo" id="correo" value="{{ old('correo') }}" maxlength="100"> <br><br>
+        {{-- ? Mostrar error segun  --}}
+        @error('correo')
+            <br><br>
+            <div class="alert alert-danger">
+                <small> {{ $message }} </small>
+            </div>
+        @enderror
 
         DNI: <br><br>
-        <input type="number" name="dni" id="dni" value="{{ old('dni') }}" maxlength="8" pattern="\d{8}" required> <br><br>
+        <input type="number" name="dni" id="dni" value="{{ old('dni') }}" maxlength="8" pattern="\d{8}">
+        @error('dni')
+            <br><br>
+            <div class="alert alert-danger">
+                <small> {{ $message }} </small>
+            </div>
+        @enderror
+        <br><br>
 
-        Nombre: <br><br> 
-        <input type="text" name="nombre" id="nombre" value=" {{ old('nombre') }} " maxlength="255" required> <br><br>
+        Nombre: <br><br>
+        <input type="text" name="nombre" id="nombre" value=" {{ old('nombre') }} " maxlength="255">
+        @error('nombre')
+            <br><br>
+            <div class="alert alert-danger">
+                <small> {{ $message }} </small>
+            </div>
+        @enderror
+        <br><br>
 
         Edad: <br><br>
-        <input type="number" name="edad" id="edad" value="{{ old('edad') }}" required><br><br>
+        <input type="number" name="edad" id="edad" value="{{ old('edad') }}">
+        @error('edad')
+            <br><br>
+            <div class="alert alert-danger">
+                <small> {{ $message }} </small>
+            </div>
+        @enderror
+        <br><br>
 
         Título: <br><br>
-        <input type="text" name="titulo" id="titulo" value=" {{ old('titulo') }} " maxlength="255" required><br> <br>
+        <input type="text" name="titulo" id="titulo" value=" {{ old('titulo') }} " maxlength="255">
+        @error('titulo')
+            <br><br>
+            <div class="alert alert-danger">
+                <small> {{ $message }} </small>
+            </div>
+        @enderror
+        <br><br>
 
         Descripción: <br><br>
-        <textarea style="resize: none" name="cuerpo" id="cuerpo" cols="60" rows="15" maxlength="2000" required>{{ old('cuerpo') }}</textarea><br><br>
+        <textarea style="resize: none" name="cuerpo" id="cuerpo" cols="60" rows="15" maxlength="2000">{{ old('cuerpo') }}</textarea>
+        @error('cuerpo')
+            <br><br>
+            <div class="alert alert-danger">
+                <small> {{ $message }} </small>
+            </div>
+        @enderror
+        <br><br>
 
         {{-- ! Mostrar errores de validación --}}
-        @if ($errors->any())
-        <div class="alert alert-danger">
-                    <h2>Error al ingresar los datos</h2>
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    <p>Por favor, intente nuevamente teniendo en cuenta estos problemas.</p>
-                </div>
-        @endif
+        {{-- @if ($errors->any())
+            <div class="alert alert-danger">
+                <h2>Error al ingresar los datos</h2>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+                <p>Por favor, intente nuevamente teniendo en cuenta estos problemas.</p>
+            </div>
+        @endif --}}
 
         <button type="submit">ENVIAR</button>
         <a href=" {{ route('posts.index') }} ">CANCELAR Y VOLVER</a>
