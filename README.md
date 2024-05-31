@@ -93,3 +93,13 @@ también tenemos para el API(solos 5 métodos, no estarán create y edit)
 - Para eliminar el registro
 
         $post -> delete();
+
+# Instalar la carpeta LANG - Español
+ - Ejecutar los siguientes comandos line x line
+
+###      
+        composer require laravel-lang/lang --dev
+###       
+        composer require laravel-lang/publisher laravel-lang/lang laravel-lang/attributes --dev     
+###
+        php artisan vendor:publish --provider="LaravelLang\Publisher\ServiceProvider"
