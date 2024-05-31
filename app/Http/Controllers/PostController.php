@@ -46,9 +46,9 @@ class PostController extends Controller
         //? Validar datos del formulario
         $validatedData = $request->validate([
             'correo' => 'required|email|max:100',
-            'dni' => 'required|digits:8',
+            'dni' => 'required|digits:8|unique:posts,dni',
             'nombre' => 'required|string|max:255',
-            'edad' => 'required|integer|min:0',
+            'edad' => 'required|integer|min:0|max:100',
             'titulo' => 'required|string|max:255',
             'cuerpo' => 'required|string|max:2000',
         ]);

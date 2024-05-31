@@ -1,6 +1,9 @@
 <x-layouts.posts title="Añadir" meta-description="En esta sección podrás añadir un nuevo post">
 
     <style>
+        body {
+            padding: 1rem;
+        }
         a {
             text-decoration: none;
             color: black;
@@ -21,63 +24,47 @@
         @csrf {{-- OjO: Proteccion contra CSRF, usar cada ves que se usa POST. Si no saldrá error 419 --}}
 
 
-        Correo: <br><br>
-        <input type="email" name="correo" id="correo" value="{{ old('correo') }}" maxlength="100"> <br><br>
-        {{-- ? Mostrar error segun  --}}
+        Correo:
+        <input type="email" name="correo" id="correo" value="{{ old('correo') }}" maxlength="100">
+        {{-- ? Mostrar error segun su NAME --}}
         @error('correo')
-            <br><br>
-            <div class="alert alert-danger">
-                <small> {{ $message }} </small>
-            </div>
+            <small style="color: red"> {{ $message }} </small>
         @enderror
+        <br><br>
 
-        DNI: <br><br>
+        DNI:
         <input type="number" name="dni" id="dni" value="{{ old('dni') }}" maxlength="8" pattern="\d{8}">
         @error('dni')
-            <br><br>
-            <div class="alert alert-danger">
-                <small> {{ $message }} </small>
-            </div>
+            <small style="color: red"> {{ $message }} </small>
         @enderror
         <br><br>
 
-        Nombre: <br><br>
+        Nombre:
         <input type="text" name="nombre" id="nombre" value=" {{ old('nombre') }} " maxlength="255">
         @error('nombre')
-            <br><br>
-            <div class="alert alert-danger">
-                <small> {{ $message }} </small>
-            </div>
+            <small style="color: red"> {{ $message }} </small>
         @enderror
         <br><br>
 
-        Edad: <br><br>
+        Edad:
         <input type="number" name="edad" id="edad" value="{{ old('edad') }}">
         @error('edad')
-            <br><br>
-            <div class="alert alert-danger">
-                <small> {{ $message }} </small>
-            </div>
+            <small style="color: red"> {{ $message }} </small>
         @enderror
         <br><br>
 
-        Título: <br><br>
+        Título:
         <input type="text" name="titulo" id="titulo" value=" {{ old('titulo') }} " maxlength="255">
         @error('titulo')
-            <br><br>
-            <div class="alert alert-danger">
-                <small> {{ $message }} </small>
-            </div>
+            <small style="color: red"> {{ $message }} </small>
         @enderror
         <br><br>
 
-        Descripción: <br><br>
+        Descripción: <br>
         <textarea style="resize: none" name="cuerpo" id="cuerpo" cols="60" rows="15" maxlength="2000">{{ old('cuerpo') }}</textarea>
         @error('cuerpo')
-            <br><br>
-            <div class="alert alert-danger">
-                <small> {{ $message }} </small>
-            </div>
+        <br>
+            <small style="color: red"> {{ $message }} </small>
         @enderror
         <br><br>
 
