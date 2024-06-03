@@ -33,8 +33,8 @@ class PostController extends Controller
         return view('posts.crear');
     }
 
-    public function update() {
-        return view('posts.actualizar');
+    public function editar(Post $post) {
+        return view('posts.editar', ['post'=> $post]);
     }
 
     public function delete() {
@@ -68,6 +68,10 @@ class PostController extends Controller
 
         //? El metodo request permite acceder a los datos enviados en la solicitud
         return redirect()->route('posts.index')->with('success', 'El post "' . $post->title . '" | Fue creado exitosamente');
+    }
+
+    public function update(Post $post) {
+        return 'Edita Correctamente';
     }
 
 }

@@ -19,9 +19,9 @@
             border-color: rgb(204, 97, 97);
         }
 
-        .btnUpdate {
-            background: rgb(255, 0, 242);
-            border-color: rgb(167, 58, 154);
+        .btnEditar {
+            background: rgb(255, 238, 0);
+            border-color: rgb(207, 196, 42);
         }
     </style>
 
@@ -36,18 +36,6 @@
         </a>
         <br>
         <br>
-        <a href=" {{ route('posts.actualizar') }} ">
-            <button class="btnUpdate">
-                ACTUALIZAR POST
-            </button>
-        </a>
-        <br>
-        <br>
-        <a href=" {{ route('posts.eliminar') }}">
-            <button class="btnDelete">
-                ELIMINAR POST
-            </button>
-        </a>
     </div>
 
     <h2 style="color: green">TODOS LOS POST:</h2>
@@ -58,6 +46,10 @@
             Autor: {{ $post->nombre }} <br>
             <a style="text-decoration: none;" href=" {{ route('posts.show', $post) }} ">
                 <button>VER MÁS</button>
+            </a>
+
+            <a href=" {{ route('posts.editar', $post) }}">
+                <button class="btnEditar">EDITAR</button>
             </a>
         </h2>
         <br><br>

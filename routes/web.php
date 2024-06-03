@@ -17,9 +17,9 @@ Route::view('/', 'inicio')->name('inicio');
 Route::get('/blogg', [PostController::class, 'index'])->name('posts.index');
 Route::get('/blogg/crear', [PostController::class, 'create'])->name('posts.crear');
 Route::post('/blogg', [PostController::class, 'store'])->name('posts.store');
-Route::get('/blogg/actualizar', [PostController::class, 'update'])->name('posts.actualizar');
-Route::get('/blogg/eliminar', [PostController::class, 'delete'])->name('posts.eliminar');
 Route::get('/blogg/{post}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/blogg/{post}/editar', [PostController::class, 'editar'])->name('posts.editar');
+Route::patch('/blog/{post}', [PostController::class,'update'])->name('posts.update');
 
 Route::get('/abouting', function () {
     $dtPipol = [
