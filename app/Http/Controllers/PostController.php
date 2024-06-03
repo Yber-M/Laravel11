@@ -54,7 +54,6 @@ class PostController extends Controller
         ]);
 
         //? Creamos un nuevo post despues de validar los datos
-        $cont = 0;
         $post = new Post;
         $post->correo = $validatedData['correo'];
         $post->dni = $validatedData['dni'];
@@ -70,7 +69,7 @@ class PostController extends Controller
         return redirect()->route('posts.index')->with('success', 'El post "' . $post->title . '" | Fue creado exitosamente');
     }
 
-    public function update(Post $post) {
+    public function update() {
         return 'Edita Correctamente';
     }
 
